@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>π Mathematics π</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Volkhov:wght@700&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            background-color: rgb(233, 215, 218);
+            background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/006/063/original/Math-Symbols3.png?1616790229");
+            background-size: 400px;
+            padding: 20px 20px;
+            border-radius: 30px;
+            margin: 30px;
+            font-family: 'Volkhov', serif;
+        }
+
+        h1 {
+            text-align: center;
+            color:rgb(241, 240, 240);
+            font-size: 45px;
+            border: 0px;
+        }
+        
+        h2 {
+            text-align: center;
+            color: rgb(243, 239, 239); 
+            font-size: 19px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 50%;
+            border-radius: 30px;
+            border: 2px solid rgb(134, 130, 130);
+        }
+
+        p {
+            line-height: 1.5;
+            font-size: 16px;
+            font-weight: 800;
+            color:rgb(12, 21, 31);
+        }
+
+        .math-type {
+            text-decoration: underline;
+        }
+
+        .learn-more {
+            display: block;
+            margin: 8px 0 0 0;
+            text-decoration: none;
+            color:rgb(196, 65, 82);
+            font-size: 12px;
+            
+        }
+
+        .learn-more:hover{
+            text-decoration: underline;
+            color: #9af0ee;
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        .tutor-button {
+            text-decoration: none;
+            color: whitesmoke;
+            font-size: 18px;
+        }
+
+        button {
+            background: brown;
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 5px 5px 10px rgb(196, 65, 82, 0.5);
+        }
+
+        button:hover {
+            opacity: 0.85;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 5px 40px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        div {
+            background: linear-gradient(#e66465, #9198e5);        
+        }
+
+        hr {
+            padding: 1px;
+            margin-top: auto;
+            background: #9198e5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>
+        For the love of Mathematics
+    </h1>
+    <hr>
+    <h2>"Life is like a <em>math equation</em>. In order to gain the most, you have to know how to convert <em>negatives</em> into <em>positives</em>."</h2>
+    <img src="https://media.istockphoto.com/vectors/-vector-id949060568?k=6&m=949060568&s=612x612&w=0&h=Dc21qzCYWIFYPPDZ2GfsIdiGZ5_PMaEClUuJrye9-0k=" alt="Math symbols">
+    <p>Mathematics is the theoretical science of quantity, number, and space, either as abstract concepts (pure mathematics) or as applied to other disciplines (applied mathematics). 
+        There are many branches of mathematics namely <span class="math-type">Algebra</span>, <span class="math-type">Geometry</span>, <span class="math-type">Arithmetic</span>, <span class="math-type">Trigonometry</span>, <span class="math-type">Calculus</span>, etc.
+        <br/>
+        <a href="https://www.vedantu.com/maths/branches-of-mathematics" target="blank" class = "learn-more"> Learn more here </a>
+    </p>
+    
+    <button class="tutor-button"><a class="tutor-button" target="blank">👩‍🏫 <strong>Need Math Tutoring?</strong></a></button>
+    <p class="footer"> Page created by <a href="https://courtneyyatteau.github.io/PortfolioProject/index.html" target="blank">Courtney Yatteau</a></p>
+    </div>
+
+    <script>
+        function tutorMe() {
+            let name = prompt("What is your name?");
+            let email = prompt("What is your email address?");
+            let topic = prompt("What math topic do you need the most help with?")
+            
+            tutorButton.innerHTML = "Thank you very much, " + name + "! I'll contact you soon to arrange a tutoring session. You'll understand " + topic + " in no time!";
+            document.querySelector(".tutor-button").setAttribute("disabled", "disabled");
+            document.querySelector(".tutor-button").style.background="#2F4F4F"
+        }
+        let tutorButton = document.querySelector(".tutor-button");
+        tutorButton.addEventListener("click", tutorMe);
+
+        
+    </script>
+</body>
+</html>
